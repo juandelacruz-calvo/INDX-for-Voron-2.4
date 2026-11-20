@@ -1,3 +1,16 @@
+## Changes in this fork
+
+This is a fork of [karasgit/INDX-for-Voron-2.4](https://github.com/karasgit/INDX-for-Voron-2.4). The files here differ from the original in the following ways. Everything else is the same as upstream.
+
+- **Heat-set insert holes opened from 4.0 mm to 4.7 mm.** All 47 M3 insert holes in the INDX parts now fit standard Voron M3x5x4 inserts (e.g. the ones in LDO kits). Changed parts: all five Tool Holders (4x42, 6x42, 6x42 for 300 mm printers, 7x41, 8x36), X-carriage, Beacon/Cartographer X endstop mount V2 and Z_Chain_Mount. Hole centres and depths are unchanged.
+- **Tool Dock pin slots and magnet bores enlarged** (all four Tool Dock variants: 4, 6, 7 and 8 tools):
+  - Pin slots: 3.20 x 6.45 mm → 3.35 x 6.95 mm, matching the 3.35 mm width of Bondtech's own Tool Dock for cleaner docking and undocking. The extra length makes up for the slot printing short.
+  - Magnet bores: 2.85 mm → 2.95 mm, so there is less to drill out by hand for the magnets.
+- **Front idler files renamed with print quantity:** `Front Idler Bottom.stl` → `Front Idler Bottom x2.stl` and `Front Idler Top.stl` → `Front Idler Top x2.stl`. File contents are unchanged.
+- **New Z chain mount for chains with inline screw holes:** `Z_Chain_Mount/INDX - Z_Chain_Mount - inline screws.stl`. It is for generic drag chains whose end brackets have the two screws one behind the other, 8 mm apart, instead of side by side. Same profile and extrusion mounting as the original Z_Chain_Mount, lengthened to 26 mm, with 4.7 mm holes for M3x5x4 heat-set inserts.
+
+---
+
 
 <b style="color:red;"> After some feedback and own experience, I designed second version of rear mount for Bondtech INDX on Voron 2.4. I recommend to use 42 mm tool distance.   </b>
 
@@ -37,7 +50,7 @@ There is special version for 6 tools on 300 mm printer. It need some cutout on l
 It is necessary to replace front idlers, because X extrusion have to fit between it. I use https://github.com/selliott79/Other-V2-Idlers .
 In my repo are front idlers modified to be able to use original screws. You can use also https://github.com/clee/VoronBFI BFI .
 
-Wires are managed with original X axis cable chain between bottoms rack and back gantry extrusion (form bottom side). Use Z_Chain_mount to mount chain to buttom extrusion. On back gantry extrusion is chain crewed dirctly to extrusion from buttom side. 
+Wires are managed with original X axis cable chain between bottoms rack and back gantry extrusion (form bottom side). Use Z_Chain_mount to mount chain to buttom extrusion. If your chain end brackets have the two screw holes one behind the other instead of side by side, use "INDX - Z_Chain_Mount - inline screws". On back gantry extrusion is chain crewed dirctly to extrusion from buttom side. 
 
 Printable area is reduced by 18 mm on Y (332 mm on 350 mm printer)- if you are brave you can reduce only 16 mm:-). X is not reduced and Z without tophead is 300 mm.
 
